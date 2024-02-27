@@ -1,0 +1,29 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Kawasaki",
+      "contrasena": "123456789",
+      "tipo": "cliente"
+    },
+    {
+      "nombre": "Emilio",
+      "contrasena": "123456789",
+      "tipo": "promotor"
+    },
+    {
+      "nombre": "Voldemort",
+      "contrasena": "123456789",
+      "tipo": "administrador"
+    },
+    {
+      "nombre": "Diego",
+      "contrasena": "123456789",
+      "tipo": "cliente"
+    },
+    {
+      "nombre": "Samuel",
+      "contrasena": "123456789",
+      "tipo": "banco"
+    }
+  ]
+}

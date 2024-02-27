@@ -1,0 +1,44 @@
+{
+    "movimientos":[
+        {
+            "nombre": "Kawasaki",
+            "promotor": "Emilio",
+            "banco":"Espher Bank",
+            "mes": "Enero",
+            "aportacion": 500,
+            "total": 500
+        },
+        {
+            "nombre": "Emilio",
+            "promotor": "Emilio",
+            "banco":"Espher Bank",
+            "mes": "Febrero",
+            "aportacion": 900,
+            "total": 900
+        },
+        {
+            "nombre": "Kawasaki",
+            "promotor": "Emilio",
+            "banco":"Espher Bank",
+            "mes": "Febrero",
+            "aportacion": 500,
+            "total": 1000
+        },
+        {
+            "nombre": "Diego",
+            "promotor": "Club Pinguin",
+            "banco":"Samuel",
+            "mes": "Febrero",
+            "aportacion": 500,
+            "total": 1000
+        },
+        {
+            "nombre": "Chema",
+            "promotor": "Emilio",
+            "banco":"Samuel",
+            "mes": "Febrero",
+            "aportacion": 500,
+            "total": 1000
+        }
+    ]
+}

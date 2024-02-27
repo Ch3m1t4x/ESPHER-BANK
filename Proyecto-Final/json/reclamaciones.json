@@ -1,0 +1,19 @@
+{
+  "reclamaciones": [
+    {
+      "nombre": "Estriper",
+      "reclamacion": "No funciona",
+      "descripcion": "Me la van a mascar"
+    },
+    {
+      "nombre": "Estriper",
+      "reclamacion": "No funciona",
+      "descripcion": "Me la van a mascar"
+    },
+    {
+      "nombre": "Pepe",
+      "reclamacion": "No funciona",
+      "descripcion": "Nada funciona"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Reclamaciones</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Reclamaciones</h1>
+    </header>
+
+    <main id="container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Reclamación</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody id="reclamacionesList"></tbody>
+        </table>
+
+        <script>
+            fetch('/reclamaciones', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        mostrarReclamaciones(data);
+                    } else {
+                        alert('Error al obtener las reclamaciones');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            function mostrarReclamaciones(data) {
+                const reclamacionesList = document.getElementById('reclamacionesList');
+                reclamacionesList.innerHTML = '';
+
+                if (data.reclamaciones && Array.isArray(data.reclamaciones)) {
+                    data.reclamaciones.forEach(reclamacion => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${reclamacion.nombre}</td>
+                            <td>${reclamacion.reclamacion}</td>
+                            <td>${reclamacion.descripcion}</td>
+                        `;
+                        reclamacionesList.appendChild(row);
+                    });
+                } else {
+                    console.error('La propiedad reclamaciones en data no es un array o es undefined');
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/jpg" href="img/ESPHER-ICONO.ico" />
+</head>
+
+<body>
+    <header>
+        <!-- <h1>ESPHER BANK</h1> -->
+        <img src="img/ESPHER_PNG.png" alt="logo1" id="logoHeader">
+
+    </header>
+
+    <main id="container">
+        <table>
+            <thead>
+                <th>Pechotes</th>
+                <th>Globos</th>
+            </thead>
+        </table>
+
+        <form id="loginForm">
+            <label>Nombre de Usuario: </label>
+            <input type="text" placeholder="Introduce tu nombre" name="usuario" class="input-form"><br>
+            <label>Contraseña: </label>
+            <input type="password" placeholder="Introduce tu Contraseña" name="contrasena" class="input-form"><br>
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(formData))
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.href = '/movimientos.html';
+                        } else {
+                            alert('Usuario no registrado');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        </script>
+
+    </main>
+
+    <footer>
+        <h2>Log-in | ESPHER Bank</h2>
+
+    </footer>
+
+</body>
+
+</html>
