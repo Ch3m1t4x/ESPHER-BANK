@@ -4,20 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimientos</title>
+    <title>Principal</title>
     <link rel="icon" type="image/jpg" href="img/ESPHER-ICONO.ico" />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/movimientos.css">
+    <!-- sass --watch index.scss:index.css -->
+
 </head>
 
 <body>
     <header>
-        <img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="logo">
+        <label for="btn-menu"><img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="logo"></label>
         <!-- <img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="cerrarSesion"> -->
+        <b>ESPHER BANK</b>
     </header>
+   
 
     <main id="container">
-        <h1>Movimientos</h1>
-        <table border="1">
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="reclamaciones.html">Incidencias</a>
+                    <a href="#">Log-out</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+        <table>
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -26,22 +40,19 @@
                     <th>Mes</th>
                     <th>Aportación</th>
                     <th>Total</th>
-                </tr>
+                </tr>            
             </thead>
-            <tbody id="movimientosList"></tbody>
+            <tbody id="movimientosList">
+               
+            </tbody>
         </table>
-
-        <script>
-            
-        </script>
-
-        <a href="reclamaciones.html">Hacer una Reclamacion</a>
-        <a href="vista-reclamaciones.html">Ir a Reclamaciones</a>
-
+    
     </main>
 
     <footer>
-        <h2>Log-in | ESPHER Bank</h2>
+        <img src="img/lastRow-banner.png" alt="" id="logoFooter">
+
     </footer>
 </body>
+
 </html>

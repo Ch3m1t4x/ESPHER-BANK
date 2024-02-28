@@ -4,23 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Reclamaciones</title>
+    <title>Reclamaciones</title>
+    <link rel="icon" type="image/jpg" href="img/ESPHER-ICONO.ico" />
+    <link rel="stylesheet" href="css/reclamaciones.css">
+    <script src="js/reclamaciones.js"></script>
+    <!-- sass --watch reclamaciones.scss:reclamaciones.css -->
+    <!--  -->
+
 </head>
 
 <body>
-    <form id="reclamaciones" action="/guardar-reclamacion" method="post">
-        <label>Nombre: </label>
-        <input type="text" placeholder="Introduce tu nombre" name="nombre"><br>
-        <label>Reclamacion: </label>
-        <input type="text" placeholder="Nombre de la Reclamacion" name="reclamacion"><br>
-        <label>Descripción: </label>
-        <input type="text" placeholder="Breve Descripción" name="descripcion"><br>
-        <input type="submit" value="Enviar" name="enviar">
-    </form>
+    <header>
+        <label for="btn-menu"><img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="logo"></label>
+        <!-- <img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="cerrarSesion"> -->
+        <b>ESPHER BANK</b>
+    </header>
+    <h1>
+        <label for="form">¡Ayúdanos a mejorar nuestro servicio! </label>
+    </h1>
+   
 
-    <script>
+    <main id="container">
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="">Inicio</a>
+                    <a href="#">Incidencias</a>
+                    <a href="#">Log-out</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+
+
+        <form id="reclamaciones" action="/guardar-reclamacion" method="post">
+
+            <input type="text" placeholder="Título de la incidencia" name="reclamacion" class="input-form">
+            <textarea cols="100" rows="10" name="descripcion" placeholder="Cuéntenos su problema"></textarea>
+            <input type="submit" value="Enviar" class="btn" id="btnReclamaciones">
+
+        </form>
         
-    </script>
+
+    
+    </main>
+
+    <footer>
+        <img src="img/lastRow-banner.png" alt="" id="logoFooter">
+
+    </footer>
 </body>
 
 </html>

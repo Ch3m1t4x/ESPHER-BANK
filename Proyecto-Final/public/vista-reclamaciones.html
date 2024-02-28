@@ -4,31 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista de Reclamaciones</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Principal</title>
+    <link rel="icon" type="image/jpg" href="img/ESPHER-ICONO.ico" />
+    <link rel="stylesheet" href="css/movimientos.css">
+    <script src="js/vista-reclamacion.js"></script>
+    <!-- sass --watch index.scss:index.css -->
+
 </head>
 
 <body>
     <header>
-        <h1>Reclamaciones</h1>
+        <label for="btn-menu"><img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="logo"></label>
+        <!-- <img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="cerrarSesion"> -->
+        <b>ESPHER BANK</b>
     </header>
+   
 
     <main id="container">
-        <table border="1">
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="reclamaciones.html">Incidencias</a>
+                    <a href="#">Log-out</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+        <table>
             <thead>
                 <tr>
                     <th>Nombre</th>
-                    <th>Reclamación</th>
-                    <th>Descripción</th>
-                </tr>
+                    <th>Título</th>
+                    <th>Incidencia</th>
+                </tr>            
             </thead>
-            <tbody id="reclamacionesList"></tbody>
+            <tbody id="movimientosList">
+               
+            </tbody>
         </table>
-
-        <script>
-            
-        </script>
+    
     </main>
+
+    <footer>
+        <img src="img/lastRow-banner.png" alt="" id="logoFooter">
+
+    </footer>
 </body>
 
 </html>
