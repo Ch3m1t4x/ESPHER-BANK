@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamaciones</title>
+    <link rel="icon" type="image/jpg" href="img/ESPHER-ICONO.ico" />
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/chat.js"></script>
+    <!-- sass --watch reclamaciones.scss:reclamaciones.css -->
+    <!--  -->
+
+</head>
+
+<body>
+    <header>
+        <label for="btn-menu"><img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="logo"></label>
+        <!-- <img src="img/ESPHER_PNG.png" alt="" class="logoHeader" id="cerrarSesion"> -->
+        <b>ESPHER BANK</b>
+    </header>
+    <h1>
+        <label for="form">¿Tienes alguna consulta? </label>
+    </h1>
+   
+
+    <main id="container">
+        <!--? menu lateral -->
+        <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+            <div class="cont-menu">
+                <nav>
+                    <a href="movimientos.html">Inicio</a>
+                    <a href="reclamaciones.html">Incidencias</a>
+                    <a href="chat.html">Chat</a>
+                    <a href="index.html">Log-out</a>
+                </nav>
+                <label for="btn-menu">✖️</label>
+            </div>
+        </div>
+        <!--? chat -->
+        <div id="chat"></div>
+        <div class="grid-container">
+            <button class="grid-item btn" onclick="chat('¿Que técnologias usa ESPHER BANK?', 'HTML, CSS, SASS, JAVASCRIPT, NODEJS, EXPRESS y JSON.')">¿Que técnologias usa ESPHER BANK?</button>
+            <button class="grid-item btn" onclick="chat('¿Como se guardan los datos de los usuarios?', 'Mediantes archivos JSON.')">¿Como se guardan los datos de los usuarios?</button>
+            <button class="grid-item btn" onclick="chat('¿Mis datos son públicos?', 'No, cada usuario puede acceder unicamente a sus propios datos.')">¿Mis datos son públicos?</button>
+            <button class="grid-item btn" onclick="chat('¿Puedo indicar reclamaciones?', 'Sí, proporcionamos un apartado exclusivamenta para reclamaciones y sugerencias.')">¿Puedo indicar reclamaciones?</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <img src="img/lastRow-banner.png" alt="" id="logoFooter">
+
+    </footer>
+</body>
+
+</html>
