@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-in</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
     <!-- sass --watch index.scss:index.css -->
 
 </head>
@@ -16,8 +16,8 @@
 
     <main id="container">
         <form action="" method="POST" id="loginForm">
-            <input type="text" placeholder="Nombre de usuario" class="input-form">
-            <input type="password" placeholder="Contraseña" class="input-form">
+            <input type="text" placeholder="Nombre de usuario" name="usuario" class="input-form">
+            <input type="password" placeholder="Contraseña" name="contrasena" class="input-form">
             <input type="submit" value="Enviar" class="btn">
 
         </form>

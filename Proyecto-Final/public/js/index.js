@@ -1,9 +1,11 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+login = document.getElementById('loginForm')
+login.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const formData = new FormData(this);
+    const formData = new FormData(login);
+    console.log(Object.fromEntries(formData));
 
-    fetch('/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -13,7 +15,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.href = '/movimientos.html';
+                window.location.href = 'movimientos.html';
             } else {
                 alert('Usuario no registrado');
             }
